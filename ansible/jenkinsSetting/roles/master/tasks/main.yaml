@@ -1,5 +1,5 @@
 - name: Install java-JRE
-  package: name=openjdk-17-jre-headless state=present
+  package: name=openjdk-18-jre state=present
 
 - name: Install font config
   package: name=fontconfig  state=present
