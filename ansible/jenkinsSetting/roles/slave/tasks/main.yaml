@@ -1,0 +1,7 @@
+---
+- name: Apt Update repositories cache
+  apt:
+    update_cache: yes
+
+- name: Install java-JRE
+  package: name=openjdk-17-jre state=present
