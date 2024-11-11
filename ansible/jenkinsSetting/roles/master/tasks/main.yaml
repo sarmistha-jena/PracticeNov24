@@ -1,5 +1,9 @@
+- name: Apt Update repositories cache
+  apt:
+    update_cache: yes
+
 - name: Install java-JRE
-  package: name=openjdk-18-jre state=present
+  package: name=openjdk-17-jre state=present
 
 - name: Install font config
   package: name=fontconfig  state=present
@@ -11,10 +15,6 @@
 
 - name: Append the Debian package repository
   shell: sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
-
-- name: Apt Update repositories cache
-  apt:
-    update_cache: yes
 
 - name: Install jenkins
   package: name=jenkins  state=present
