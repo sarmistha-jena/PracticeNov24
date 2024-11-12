@@ -1,6 +1,5 @@
 ---
-- hosts: localhost
+- hosts: master
   become: yes
-  connection: local
   roles:
     - docker
