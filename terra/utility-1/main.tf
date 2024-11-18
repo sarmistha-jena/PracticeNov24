@@ -7,7 +7,7 @@ data "aws_ec2_instance_type_offerings" "my_instance_typ1" {
     name   = "location"
     values = ["ap-south-1"]
   }
-  location_type = "availabilty-zone"
+  location_type = "availability-zone"
 }
 
 output "output_v1_1" {
