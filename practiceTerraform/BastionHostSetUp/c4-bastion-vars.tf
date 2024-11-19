@@ -5,5 +5,5 @@ variable "instance_type" {
 
 variable "instance_keypair" {
   type    = string
-  default = "linux-pract1"
+  default = "eks-terraform-key"
 }
