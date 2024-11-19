@@ -8,6 +8,10 @@ resource "null_resource" "copy_ec2_key" {
     private_key = file("private-key/eks-terraform-key.pem")
   }
 
+  provisioner "remote-exec" {
+    inline = [ "sudo chmod +x /tmp" ]
+  }
+
   provisioner "file" {
     source = "private-key/eks-terraform-key.pem"
     destination = "/tmp/eks-terraform-key.pem"
