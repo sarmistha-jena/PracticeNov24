@@ -14,7 +14,7 @@ resource "null_resource" "copy_ec2_key" {
   }
 
   provisioner "remote-exec" {
-    inline = [ "sudo chmod 400 /tmp/eks-terraform-key.pem" ]
+    inline = [ "sudo chmod 400 /home/ec2-user/key/eks-terraform-key.pem" ]
   }
 
   provisioner "local-exec" {
