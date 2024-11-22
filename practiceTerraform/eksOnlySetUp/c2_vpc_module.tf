@@ -42,5 +42,3 @@ module "vpc" {
   # Instances launched into the Public subnet should be assigned a public IP address.
   map_public_ip_on_launch = true
 }
-
-resource "" "" {}
