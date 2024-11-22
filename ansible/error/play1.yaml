@@ -1,0 +1,24 @@
+---
+- name : Error type 1 with block and rescue
+  hosts: localhost
+  become: yes
+  connection: local
+  tasks:
+    - name: Ignore error
+      command: /bin/false
+      ignore_errors: true
+    - name: Task one executing
+      block:
+        - name: I am block 1 - task1
+          debug: msg="Message 1 printing"
+        - name: I am block 1 - task2
+          command: /bin/nosuchfile
+      rescue:
+        - name: Print error msg
+          debug: msg="!!! Error !!!!"
+      always:
+        - name: Print always msg
+          debug: msg="I am kind of finally!!!"
+    - name: Task 2 executing
+      debug: msg="This is not printed"
+
