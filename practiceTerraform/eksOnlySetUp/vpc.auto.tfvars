@@ -1,4 +1,4 @@
-vpc_name                               = "Nov24-VPC26"
+vpc_name                               = "Nov24-VPC25"
 vpc_cidr_block                         = "10.0.0.0/16"
 vpc_availability_zone                  = ["ap-south-1c", "ap-south-1b"]
 vpc_public_subnets                     = ["10.0.101.0/24", "10.0.102.0/24"]
