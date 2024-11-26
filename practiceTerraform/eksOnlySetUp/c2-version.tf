@@ -5,11 +5,17 @@ terraform {
       source  = "hashicorp/aws"
       version = ">= 5.31"
     }
-    kubernetes = {
-      source = "hashicorp/kubernetes"
-      #version = "~> 2.7"
-      version = ">= 2.20"
-    }
+  }
+
+  # Adding Backend as S3 for Remote State Storage
+  backend "s3" {
+    bucket = "my-tf-test-bucket-backend"
+    key    = "eksOnlySetUp/terraform.tfstate" # path & file which will hold the state #
+    region = "ap-south-1"
+    #dynamodb_table = "terraform-lock"
+    #encrypt        = "true"
+    # For State Locking
+    #dynamodb_table = "dev-ekscluster"
   }
 }
 
