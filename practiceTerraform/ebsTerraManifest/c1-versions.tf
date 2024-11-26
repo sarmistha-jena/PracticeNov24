@@ -23,7 +23,7 @@ terraform {
   # Adding Backend as S3 for Remote State Storage
   backend "s3" {
     bucket = "my-tf-test-bucket-backend"
-    key    = "k8asTerra/terraform.tfstate" # path & file which will hold the state #
+    key    = "ebsTerraManifest/terraform.tfstate" # path & file which will hold the state #
     region = "ap-south-1"
     #dynamodb_table = "terraform-lock"
     #encrypt        = "true"

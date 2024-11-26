@@ -13,7 +13,7 @@ data "terraform_remote_state" "eks" {
   backend = "s3"
   config = {
     bucket = "my-tf-test-bucket-backend"
-    key    = "ebsTerraManifest/terraform.tfstate" # path & file which will hold the state #
+    key    = "eksOnlySetUp/terraform.tfstate" # path & file which will hold the state #
     region = "ap-south-1"
   }
 }
