@@ -1,7 +1,7 @@
 # Datasource: EKS Cluster Auth
-data "aws_eks_cluster_auth" "cluster" {
+/*data "aws_eks_cluster_auth" "cluster" {
   name = data.terraform_remote_state.eks.outputs.cluster_id
-}
+}*/
 
 # HELM Provider
 provider "helm" {
