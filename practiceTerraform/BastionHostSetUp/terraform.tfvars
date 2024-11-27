@@ -1,3 +1,3 @@
 aws_region        = "ap-south-1"
-environment       = "clone"
-business_division = "OPS"
+environment       = "test"
+business_division = "ops"
