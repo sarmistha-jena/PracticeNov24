@@ -11,7 +11,8 @@ variable "food" {
   }
 }
 variable "exp" {
-  default = ["ooo"]
+  type = any
+  default = "ooo"
 }
 locals {
   typeF = var.food == "carrot" ? "veggie" : "fruit"
