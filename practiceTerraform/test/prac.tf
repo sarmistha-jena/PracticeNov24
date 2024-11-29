@@ -11,7 +11,6 @@ variable "food" {
   }
 }
 variable "exp" {
-  type = any
   default = "ooo"
 }
 locals {
