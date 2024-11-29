@@ -10,12 +10,12 @@ variable "food" {
     error_message = "Variable contains numbers"
   }
 }
-variable "foods" {
+variable "exp" {
   type = any
 }
 locals {
   typeF = var.food == "carrot" ? "veggie" : "fruit"
-  foods = try(tostring(var.foods), tolist(var.foods))
+  foods = try(tostring(var.exp), tolist(var.exp))
 }
 
 output "foodType" {
