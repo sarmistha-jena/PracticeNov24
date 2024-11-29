@@ -7,3 +7,15 @@ locals {
     environment = local.environment
   }
 }
+
+variable "food" {
+  type = string
+  default = "carrot"
+}
+resource "null_resource" "cond" {
+  typeF = var.food == "carrot" ? "veggie" : "fruit"
+}
+
+output "foodType" {
+  value = null_resource.cond.typeF
+}
