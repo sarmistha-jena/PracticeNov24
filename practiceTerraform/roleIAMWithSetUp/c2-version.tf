@@ -10,10 +10,10 @@ terraform {
   # Adding Backend as S3 for Remote State Storage
   backend "s3" {
     bucket = "my-tf-test-bucket-backend"
-    key    = "eksOnlySetUp/terraform.tfstate" # path & file which will hold the state #
+    key    = "roleIAMWithSetUp/terraform.tfstate" # path & file which will hold the state #
     region = "ap-south-1"
     #dynamodb_table = "terraform-lock"
-    #encrypt        = "true"
+    encrypt        = "true"
     # For State Locking
     #dynamodb_table = "dev-ekscluster"
   }
